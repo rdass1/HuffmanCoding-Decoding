@@ -26,8 +26,7 @@ encoder.addEventListener('input',
 
 decoder.addEventListener('input',
     function inputListener(e){
-        if(huffmanCoding.string == "" || huffmanCoding.string == null){
-            document.getElementById("decoderInput").value = "";
+        if(huffmanCoding.string == "" || ){
             alert("You have to input characters in encoding first!");
         }
         huffmanCoding.clearDecoder();

@@ -92,7 +92,7 @@ HuffmanCoding.prototype = {
     printEncodedCode: function(root){
         
         for(var i = 0; i < this.string.length; i++){
-            document.getElementById("charCodesInOrder").innerHTML += this.codeDict[this.string.substring(i,i+1)];
+            document.getElementById(("charCodesInOrder").innerHTML += this.codeDict[this.string.substring(i,i+1)];
         }
         
     },

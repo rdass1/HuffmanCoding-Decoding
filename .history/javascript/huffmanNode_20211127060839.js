@@ -99,20 +99,17 @@ HuffmanCoding.prototype = {
     deCode: function(code){
         var node = this.root;
         output = "";
-        for(var i = 0; i <= code.length; i++){
-            if(code.substring(i,i+1)==0 && node.c == '-'){
+        for(var i = 0; i <= code.length+1; i++){
+            else if(code.substring(i,i+1)==0 && node.c == '-'){
                 node = node.left;
             }
             else if(code.substring(i,i+1)==1 && node.c == '-'){
                 node = node.right
             }
-            else if(node.c != '-' ) {
+            else if(node.c != '-') {
                 output += node.c;
                 node = this.root;
                 i--;
-            }
-            else if(node.left == null && node.right == null){
-                return;
             }
             
             

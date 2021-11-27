@@ -100,19 +100,16 @@ HuffmanCoding.prototype = {
         var node = this.root;
         output = "";
         for(var i = 0; i <= code.length; i++){
-            if(code.substring(i,i+1)==0 && node.c == '-'){
-                node = node.left;
-            }
-            else if(code.substring(i,i+1)==1 && node.c == '-'){
-                node = node.right
-            }
-            else if(node.c != '-' ) {
+            if(node.c != '-') {
                 output += node.c;
                 node = this.root;
                 i--;
             }
-            else if(node.left == null && node.right == null){
-                return;
+            else if(code.substring(i,i+1)==0 && node.c == '-'){
+                node = node.left;
+            }
+            else if(code.substring(i,i+1)==1 && node.c == '-'){
+                node = node.right
             }
             
             
@@ -123,17 +120,15 @@ HuffmanCoding.prototype = {
     // if(){
         
     // }
-    document.getElementById("decoderOutput").innerHTML = "Decoder Output:<br>"+output;
+    document.getElementById("decoderOutput").innerHTML = output;
     return output;
     },
     clearTable: function(){
+        document.getElementById("decoderOutput").innerHTML = "Decoder Output:<br>";
         document.getElementById("charCodesInOrder").innerHTML = "Original:<br>";
         document.getElementById("charCodes").innerHTML = "Sorted:<br>";
         document.getElementById("charCodesVerbose").innerHTML = "Table:<br>";
         
-    },
-    clearDecoder: function(){
-        document.getElementById("decoderOutput").innerHTML = "Decoder Output:<br>";
     }
 }
 

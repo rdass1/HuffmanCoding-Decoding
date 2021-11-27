@@ -16,7 +16,7 @@ encoder.addEventListener('input',
         huffmanCoding.printCode(root,"");
         huffmanCoding.printEncodedCode(root);
         
-        console.clear();
+        //console.clear();
         print(root);
         //print(huffmanCoding.codeDict);
         
@@ -26,8 +26,7 @@ encoder.addEventListener('input',
 
 decoder.addEventListener('input',
     function inputListener(e){
-        if(huffmanCoding.string == "" || huffmanCoding.string == null){
-            document.getElementById("decoderInput").value = "";
+        if(huffmanCoding.string == null){
             alert("You have to input characters in encoding first!");
         }
         huffmanCoding.clearDecoder();

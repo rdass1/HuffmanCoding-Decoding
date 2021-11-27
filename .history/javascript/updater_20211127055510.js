@@ -16,8 +16,8 @@ encoder.addEventListener('input',
         huffmanCoding.printCode(root,"");
         huffmanCoding.printEncodedCode(root);
         
-        console.clear();
-        print(root);
+        //console.clear();
+        //print(root);
         //print(huffmanCoding.codeDict);
         
     }
@@ -26,18 +26,15 @@ encoder.addEventListener('input',
 
 decoder.addEventListener('input',
     function inputListener(e){
-        if(huffmanCoding.string == "" || huffmanCoding.string == null){
-            document.getElementById("decoderInput").value = "";
+        if(huffmanCoding.string == null){
             alert("You have to input characters in encoding first!");
         }
-        huffmanCoding.clearDecoder();
-        if(decoder.value != ''){
-            decoder.value = e.target.value.replace(/[^01]/g, '');
-            var list = huffmanCoding.deCode(decoder.value);
+        if(decoder.value != null){
+
         }
         
-        
-        
+        huffmanCoding.clearTable();
+        var list = huffmanCoding.deCode(decoder.value);
         // console.clear();
         print(list);
     }
