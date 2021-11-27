@@ -1,0 +1,55 @@
+class HuffmanNode{
+    constructor(){
+        this.data = 0;
+        this.c = '';
+        this.left = null;
+        this.right = null;
+    }
+}
+
+HuffmanCoding.prototype = {
+    createTree: function(){
+        var sortedFrequency = sortFrequency(frequency(string));
+
+        //console.log(charArray);
+
+        var charArray = [];
+        var charFreq = [];
+
+        seperateDict(sortedFrequency);
+
+        let n = charArray.length;
+        let queue = [];
+
+
+
+        for(var i = 0; i < n; i++){
+            let huffNode = new HuffmanNode();
+            huffNode.c = charArray[i];
+            huffNode.data = charFreq[i];
+            huffNode.left = null;
+            huffNode.right = null;
+            queue.push(huffNode);
+
+        }
+
+        var root = null;
+        queue.sort(function(a,b){return a.data-b.data});
+
+        while(queue.length>1){
+            var x = queue[0];
+            queue.shift();
+            var y = queue[0];
+            queue.shift();
+            var f = new HuffmanNode();
+            f.data = x.data + y.data;
+            f.c = '-';
+            f.left = x;
+            f.right = y;
+            root = f;
+            queue.push(f);
+            queue.sort(function(a,b){return a.data-b.data});
+        }
+    }
+}
+
