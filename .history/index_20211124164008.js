@@ -1,0 +1,5 @@
+
+var string = "AAAAAABCCCCCCDDEEEEE";
+
+
+

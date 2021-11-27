@@ -1,0 +1,25 @@
+{
+  "name": "huffmancoding-decoding",
+  "version": "1.0.0",
+  "description": "A website for cs430",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --hot --open",
+    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdass1/HuffmanCoding-Decoding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdass1/HuffmanCoding-Decoding/issues"
+  },
+  "homepage": "https://github.com/rdass1/HuffmanCoding-Decoding#readme",
+  "dependencies": {
+    "binary": "^0.3.0",
+    "tree-visualizer": "^1.0.1"
+  }
+}
