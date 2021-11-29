@@ -24,7 +24,7 @@ encoder.addEventListener('input',
         try{
             drawGraph(sortedFrequency);
         }catch(e){
-            
+
         }
         //drawGraph2(root);
         

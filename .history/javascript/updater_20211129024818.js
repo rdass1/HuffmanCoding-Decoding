@@ -22,10 +22,9 @@ encoder.addEventListener('input',
         
         remove();
         try{
-            drawGraph(sortedFrequency);
-        }catch(e){
             
         }
+        drawGraph(sortedFrequency);
         //drawGraph2(root);
         
         //print(huffmanCoding.codeDict);

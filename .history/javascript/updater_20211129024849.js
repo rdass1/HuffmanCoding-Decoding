@@ -23,7 +23,7 @@ encoder.addEventListener('input',
         remove();
         try{
             drawGraph(sortedFrequency);
-        }catch(e){
+        }catch(){
             
         }
         //drawGraph2(root);

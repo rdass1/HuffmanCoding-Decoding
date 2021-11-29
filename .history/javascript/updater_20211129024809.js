@@ -21,11 +21,7 @@ encoder.addEventListener('input',
         var sortedFrequency = huffmanCoding.createNode(frequency(encoder.value));
         
         remove();
-        try{
-            drawGraph(sortedFrequency);
-        }catch(e){
-            
-        }
+        drawGraph(sortedFrequency);
         //drawGraph2(root);
         
         //print(huffmanCoding.codeDict);
