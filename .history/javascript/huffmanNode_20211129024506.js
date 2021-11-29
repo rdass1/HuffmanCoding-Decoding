@@ -144,7 +144,7 @@ HuffmanCoding.prototype = {
             if(code.substring(i,i+1)==1 && node.c == '-'){
                 node = node.left;
             }
-            else if(code.substring(i,i+1)==0 && node.c == '-'){
+            else if(code.substring(i,i+1)==1 && node.c == '-'){
                 node = node.right
             }
             else if(node.c != '-') {

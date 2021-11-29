@@ -24,7 +24,7 @@ encoder.addEventListener('input',
         drawGraph(sortedFrequency);
         //drawGraph2(root);
         
-        print(huffmanCoding.codeDict);
+        print(huffmanCoding.codeDict)
         //
         //print(root);
         //print(huffmanCoding.codeDict);

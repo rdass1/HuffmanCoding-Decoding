@@ -112,6 +112,7 @@ HuffmanCoding.prototype = {
             return ;
         }
         if (root.left == null && root.right == null ){
+            root.id = ++this.idCounter;
             root.code += s;
             this.codeDict[root.c] = s;
             for(var i = 0; i < root.data;i++){
@@ -141,10 +142,10 @@ HuffmanCoding.prototype = {
             return 0;
         }
         for(var i = 0; i <= code.length; i++){
-            if(code.substring(i,i+1)==1 && node.c == '-'){
+            if(code.substring(i,i+1)==0 && node.c == '-'){
                 node = node.left;
             }
-            else if(code.substring(i,i+1)==0 && node.c == '-'){
+            else if(code.substring(i,i+1)==1 && node.c == '-'){
                 node = node.right
             }
             else if(node.c != '-') {
