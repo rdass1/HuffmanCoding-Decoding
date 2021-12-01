@@ -1,0 +1,50 @@
+body{
+    font-family: Outfit;
+}
+.graphBox{
+    width:100%;
+    height: 100vh;
+    background-color:rgb(163, 165, 42);
+}
+
+.graph{
+    width:100%;
+    height: 100vh;
+    /* background-color:rgb(42, 126, 165); */
+}
+
+#fileInput {
+  font
+}
+
+#encoderInput,#decoderInput{
+    width: 98%;
+    height: 30%;
+    font-family: Outfit;
+}
+
+.main-container{
+    width:100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 3fr;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.container-child{
+    width: inherit;
+    height: inherit;
+    background-color:aqua;
+}
+
+.title{
+    grid-column: 1 / span 2;
+    height:100%;
+
+}
+.title > h1{
+    text-align: center;
+    font-family: Outfit;
+}
