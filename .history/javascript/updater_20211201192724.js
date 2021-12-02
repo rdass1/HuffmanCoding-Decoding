@@ -36,6 +36,12 @@ function update(){
                 decodedText = huffmanCoding.deCode(encodedOutput,huffmanCoding.codeDict);
             
             }
+    
+            
+            
+            var dict = encodedText.split('\n')[1];
+            //print(JSON.parse(dict));
+            
             
     
             remove();
@@ -182,7 +188,9 @@ encoder.addEventListener('input',
         huffmanCoding.clearDecoder();
         fileInput.value = null;
         decoderInput.value = null;
+        
         update();
+       
     }
 
 );

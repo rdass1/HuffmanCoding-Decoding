@@ -182,7 +182,9 @@ encoder.addEventListener('input',
         huffmanCoding.clearDecoder();
         fileInput.value = null;
         decoderInput.value = null;
+        
         update();
+       
     }
 
 );

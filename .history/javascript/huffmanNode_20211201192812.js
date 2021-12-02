@@ -50,7 +50,10 @@ HuffmanCoding.prototype = {
                 }
             }
         }
-       
+    
+        // new_list.sort(function(a,b){
+        //     return a.freq - b.freq
+        // });
     
         return new_list.reverse();
     },

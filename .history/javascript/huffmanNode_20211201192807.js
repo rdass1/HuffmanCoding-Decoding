@@ -50,7 +50,10 @@ HuffmanCoding.prototype = {
                 }
             }
         }
-       
+    
+        // new_list.sort(function(a,b){
+        //     return a.freq - b.freq
+        // });
     
         return new_list.reverse();
     },
@@ -108,6 +111,9 @@ HuffmanCoding.prototype = {
         if (root.left == null && root.right == null ){
             root.code += s;
             this.codeDict[root.c] = s;
+            // for(var i = 0; i < root.data;i++){
+            //     document.getElementById("charCodes").innerHTML += root.code;
+            // }
             document.getElementById("TableCode").value +=root.c + ":" + s+"\n";
             return;
         }

@@ -31,22 +31,6 @@ let sortFrequency = (dict) => {
     return items;
 }
 
-function remove() {
-    var graph = document.querySelector('svg');
-    if (graph) { graph.parentElement.removeChild(graph) };
 
-}
-
-function clearFields(){
-    remove();
-    document.getElementById("decoderOutput").innerHTML = "";
-    document.getElementById("DeCode").value = "";
-    huffmanCoding.clearTable();
-    fileInput.value = null;
-    decoderInput.value = null;
-    encodedText = "";
-    decodedText = "";
-    fileName = "";
-}
 
 

@@ -50,7 +50,10 @@ HuffmanCoding.prototype = {
                 }
             }
         }
-       
+    
+        // new_list.sort(function(a,b){
+        //     return a.freq - b.freq
+        // });
     
         return new_list.reverse();
     },
@@ -108,6 +111,9 @@ HuffmanCoding.prototype = {
         if (root.left == null && root.right == null ){
             root.code += s;
             this.codeDict[root.c] = s;
+            // for(var i = 0; i < root.data;i++){
+            //     document.getElementById("charCodes").innerHTML += root.code;
+            // }
             document.getElementById("TableCode").value +=root.c + ":" + s+"\n";
             return;
         }
@@ -128,6 +134,41 @@ HuffmanCoding.prototype = {
         document.getElementById("Code").value = output;
         return output;
     },
+    // deCode: function(code){
+    //     var node = this.root;
+    //     output = "";
+    //     if(node.left == null && node.right== null){
+    //         for(var i = 0 ; i < code.length; i++){
+    //             document.getElementById("decoderOutput").innerHTML += node.c;
+    //         }
+    //         return 0;
+    //     }
+    //     for(var i = 0; i <= code.length; i++){
+    //         if(code.substring(i,i+1)==1 && node.c == '-'){
+    //             node = node.left;
+    //         }
+    //         else if(code.substring(i,i+1)==0 && node.c == '-'){
+    //             node = node.right
+    //         }
+    //         else if(node.c != '-') {
+    //             output += node.c;
+    //             node = this.root;
+    //             if(!(node.left == null && node.right == null)){
+    //                 i--;
+    //             }
+    //         }
+            
+            
+            
+    //     }
+       
+        
+    // // if(){
+        
+    // // }
+    // document.getElementById("decoderOutput").innerHTML = "Decoder Output:<br>"+output;
+    // return output;
+    // },
     deCode: function(code,list){
         var output = "";
         if(code != ""){
